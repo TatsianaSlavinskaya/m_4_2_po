@@ -1,14 +1,10 @@
-var Helper = require('../../support/Helper');
-var Footer = function() {
-  this.helper = Helper;
-  this.advertismentTables = element.all(by.css('.grid-col.grid-col--tiles'));
+module.exports.Footer = (function() {
 
-  var self = this;
+  var advertismentTables = element.all(by.css('.grid-col.grid-col--tiles'));
 
   this.getTableCount = function() {
-    return self.advertismentTables.count();
+    return advertismentTables.count();
+
   };
 
-}
-Footer.prototype = Helper;
-module.exports = new Footer();
+})();

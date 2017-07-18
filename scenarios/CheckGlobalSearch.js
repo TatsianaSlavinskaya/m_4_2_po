@@ -1,5 +1,6 @@
 var Helper = require('../support/Helper');
 var BasicPage = require('../page_objects/pages/BasicPage');
+var provider = require('../page_objects/pages/PageFactory');
 
 describe('Should check global search', () => {
 
@@ -7,7 +8,7 @@ describe('Should check global search', () => {
   let helper = Helper;
 
   beforeAll(() => {
-    browser.get('http://allrecipes.com/');
+    provider.getPageObjects('home').visit();
   });
 
   it('Should check searchs elements', () => {
